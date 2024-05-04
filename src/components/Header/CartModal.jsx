@@ -6,7 +6,7 @@ export const CartModal = ({ isOpenCartModal, setIsOpenCartModal}) => {
     const { cartProducts, deleteCartProducts } = useContext(CartContext);
 
     return (
-        <Dialog header="Cart" visible={isOpenCartModal} modal={false} style={{ width: '50vw' }} onHide={() => setIsOpenCartModal(false)} className="text-lg font-bold md:fixed md:right-6 md:top-[100px] w-[200x]">
+        <Dialog header="Cart" visible={isOpenCartModal} modal={false} style={{ maxWidth: '400px' }} onHide={() => setIsOpenCartModal(false)} className="md:text-lg font-bold md:fixed md:right-6 md:top-[100px] w-[200x]">
                 <hr />
                 {cartProducts.length === 0 && (
                     <p className="py-16 text-center">Your cart is empty</p>
@@ -14,7 +14,7 @@ export const CartModal = ({ isOpenCartModal, setIsOpenCartModal}) => {
                 {cartProducts.map((product) => (
                     <article
                         key={product.id}
-                        className="grid grid-cols-[1fr_4fr_1fr] items-center gap-6 px-6 py-4"
+                        className="grid grid-cols-[1fr_4fr_1fr] items-center gap-6 py-4"
                     >
                         <img src={product.img} alt="" className="rounded-md" />
                         <div>

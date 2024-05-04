@@ -19,7 +19,7 @@ export const Gallery = ({ images }) => {
     ];
 
     const itemTemplate = (item) => {
-       return <Image src={item.itemImageSrc} alt="Image" width="250" preview />
+       return <Image src={item.itemImageSrc} alt="Image" width="250" preview  showItemNavigators />
     }
 
     const thumbnailTemplate = (item) => {
@@ -29,7 +29,7 @@ export const Gallery = ({ images }) => {
     return (
         <div className="card flex justify-content-center">
             <Galleria value={images} responsiveOptions={responsiveOptions} numVisible={5} style={{ maxWidth: '640px' }} 
-                item={itemTemplate} thumbnail={thumbnailTemplate} />
+                item={itemTemplate} thumbnail={thumbnailTemplate} showItemNavigators />
         </div>
     )
 }
