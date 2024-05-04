@@ -6,15 +6,15 @@ export const Gallery = ({ images }) => {
     const responsiveOptions = [
         {
             breakpoint: '991px',
-            numVisible: 4
-        },
-        {
-            breakpoint: '767px',
             numVisible: 3
         },
         {
+            breakpoint: '767px',
+            numVisible: 2
+        },
+        {
             breakpoint: '575px',
-            numVisible: 1
+            numVisible: 0
         }
     ];
 
